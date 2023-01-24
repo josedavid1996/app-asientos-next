@@ -177,3 +177,172 @@ body {
   width: 100% !important;
   height: 100% !important;
 }
+.m-cls-1 {
+  font-size: 176px;
+}
+
+.m-cls-1,
+.m-cls-2,
+.m-cls-3,
+.m-cls-4,
+.m-cls-5,
+.m-cls-6,
+.m-cls-7 {
+  fill: #fff;
+  font-family: Lato-Bold, Lato;
+}
+
+.m-cls-8 {
+  font-size: 154.22px;
+}
+
+.m-cls-8,
+.m-cls-9,
+.m-cls-10 {
+  font-family: Poppins-Bold, Poppins;
+}
+
+.m-cls-11 {
+  fill: #ff4c33;
+}
+
+.m-cls-12 {
+  fill: #ffc301;
+}
+
+.m-cls-13 {
+  fill: #ff8376;
+}
+
+.m-cls-14 {
+  fill: #969696;
+}
+
+.m-cls-15 {
+  fill: #870c38;
+}
+
+.m-cls-16 {
+  fill: #c70039;
+}
+
+.m-cls-2 {
+  font-size: 113.9px;
+}
+
+.m-cls-17 {
+  fill: #b5b5b6;
+}
+
+.m-cls-17,
+.m-cls-9,
+.m-cls-18 {
+  stroke: #5b5a5a;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.m-cls-3 {
+  font-size: 176.89px;
+}
+
+.m-cls-9 {
+  fill: #f9f9fa;
+  font-size: 241.58px;
+}
+
+.m-cls-4 {
+  font-size: 155.33px;
+}
+
+.m-cls-5 {
+  font-size: 140.73px;
+}
+
+.m-cls-18 {
+  fill: none;
+}
+
+.m-cls-6 {
+  font-size: 142.06px;
+}
+
+.m-cls-10 {
+  fill: #010101;
+  font-size: 154.22px;
+}
+
+.m-cls-7 {
+  font-size: 162px;
+}
+
+.t-cls-1 {
+  font-size: 154.22px;
+}
+
+.t-cls-1,
+.t-cls-2,
+.t-cls-3 {
+  font-family: Poppins-Bold, Poppins;
+}
+
+.t-cls-4 {
+  fill: #969696;
+}
+
+.t-cls-5 {
+  fill: #bfbfbf;
+}
+
+.t-cls-6 {
+  fill: #b5b5b6;
+}
+
+.t-cls-6,
+.t-cls-7,
+.t-cls-2,
+.t-cls-8 {
+  stroke: #5b5a5a;
+  stroke-miterlimit: 10;
+}
+
+.t-cls-6,
+.t-cls-2,
+.t-cls-8 {
+  stroke-width: 2px;
+}
+
+.t-cls-7 {
+  stroke-width: 5px;
+}
+
+.t-cls-7,
+.t-cls-8 {
+  fill: none;
+}
+
+.t-cls-2 {
+  fill: #f9f9fa;
+  font-size: 241.58px;
+}
+
+.t-cls-3 {
+  fill: #010101;
+  font-size: 154.22px;
+}
+
+.t-cls-5 {
+  fill: rgb(160, 46, 43);
+  cursor: pointer;
+}
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #bf0a30;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: arial;
+}
