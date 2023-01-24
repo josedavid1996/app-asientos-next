@@ -11,12 +11,12 @@ function App() {
   const refZoom = useRef<ReactZoomPanPinchRef | null>(null)
   const [scale, setScale] = useState(0)
   const [isImage, setIsImage] = useState(true)
-  const [scalewit, setScalewit] = useState(0)
-  // console.log(scale)
-
   // estado para controlar el tamaño del fondo negro de la imagen pequeña del mapa
   const [sizeShadow, setSizeShadow] = useState(1)
-  console.log(scale)
+
+  const [translateXShawdow, setTranslateXShawdow] = useState(0)
+  // console.log(scale)
+  console.log(sizeShadow)
 
   const stepUpSizeShadow = () => {
     if (sizeShadow === 3) return
@@ -26,14 +26,14 @@ function App() {
     if (sizeShadow === 1) return
     setSizeShadow((prev) => prev - 1)
   }
-  useEffect(() => {
-    if (scale <= 1.5) {
-      setIsImage(true)
+
+  const translateX = (refZoom: ReactZoomPanPinchRef) => {
+    if (sizeShadow <= 1) return
+    if (refZoom.state.positionX >= -131) {
+      setTranslateXShawdow(refZoom.state.positionX)
     }
-    if (scale > 1.5) {
-      setIsImage(false)
-    }
-  }, [scale])
+  }
+
   return (
     <div className={`flex justify-center w-full items-center min-h-screen `}>
       <div className="w-[60%] h-[60vh] bg-white relative">
@@ -43,12 +43,19 @@ function App() {
           initialPositionY={0}
           ref={refZoom}
           maxScale={3}
+          onPanning={(refZoom) => {
+            // setTranslateXShawdow(refZoom.state.positionX)
+            translateX(refZoom)
+          }}
           onZoom={(refZoom) => setSizeShadow(Math.round(refZoom.state.scale))}
         >
           {({ zoomIn, zoomOut, resetTransform, setTransform, ...rest }) => {
             return (
               <>
-                <CardMap sizeShadow={sizeShadow} />
+                <CardMap
+                  sizeShadow={sizeShadow}
+                  translateXShawdow={translateXShawdow}
+                />
 
                 <div className="tools absolute top-2 right-3 hidden sm:flex flex-col z-20">
                   <button
