@@ -19,6 +19,7 @@
     "space-before-function-paren": "off",
     "no-unused-vars": "off",
     "no-use-before-define": "off",
-    "multiline-ternary": "off"
+    "multiline-ternary": "off",
+    "curly": "off"
   }
 }
