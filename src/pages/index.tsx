@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import {
   TransformWrapper,
   TransformComponent,
@@ -6,11 +6,9 @@ import {
 } from 'react-zoom-pan-pinch'
 import LayoutSvg from '../components/layout/Navbar/LayoutSvg'
 import CardMap from '../components/shared/CardMap'
-import Icon from '../components/shared/Icon'
 
 function App() {
   const refZoom = useRef<ReactZoomPanPinchRef | null>(null)
-  const [scale, setScale] = useState(0)
 
   const refData = useRef<HTMLDivElement | null>(null)
 
@@ -43,11 +41,33 @@ function App() {
 
   return (
     <div
-      className={`flex justify-center w-full items-center min-h-screen relative`}
+      className={`flex justify-center w-full items-center min-h-screen relative overflow-hidden`}
     >
-      <div id="info-box" ref={refData}></div>
+      <div
+        id="info-box"
+        className="grid-cols-1 md:grid-cols-3 px-3 py-2 w-[200px] md:w-[300px]"
+        ref={refData}
+      >
+        {/* <div className="flex flex-col items-center">
+          <span className=" text-gray-400 text-lg uppercase">Fila</span>
+          <span className="font-bold text-lg">Barrera</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className=" text-gray-400 text-lg uppercase">Asiento</span>
+          <span className="font-bold text-lg">1</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className=" text-gray-400 text-lg uppercase">Precio</span>
+          <span className="font-bold text-lg">S/300.00</span>
+        </div>
+        <div className="md:col-span-3 flex justify-center">
+          <span className="text-center text-gray-400 text-lg uppercase">
+            Tendido 3B
+          </span>
+        </div> */}
+      </div>
 
-      <div className="w-[60%] h-[60vh] bg-white relative">
+      <div className="w-[90%] h-[60vh] md:w-[60%] md:h-[60vh] bg-white relative">
         <TransformWrapper
           initialScale={1}
           initialPositionX={0}

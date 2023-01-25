@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { MouseEvent, SyntheticEvent, useEffect } from 'react'
 
 const LayoutSvg = ({
   sizeShadow,
@@ -10,7 +10,6 @@ const LayoutSvg = ({
   const idsDesactive = [
     'T3B-B-3',
     'T3B-B-5',
-    'T3B-B-1',
     'T3B-B-10',
     'T3B-B-15',
     'T3B-CB-2',
@@ -34,7 +33,7 @@ const LayoutSvg = ({
   }, [sizeShadow >= 2])
 
   const handleMouse = (e: any) => {
-    refData.current.style.display = 'block'
+    refData.current.style.display = 'grid'
     refData.current.style.top = `${e.pageY}px`
     refData.current.style.left = `${e.pageX}px`
     refData.current.innerHTML = e.target.dataset.info
@@ -796,11 +795,31 @@ const LayoutSvg = ({
               cy="1886.65"
               r="17.58"
               id="T3B-B-1"
+              onClick={(e: any) => {
+                e.target.classList.toggle('fill-[#C70039]')
+                // console.log(e.target.classList!)
+              }}
               onMouseEnter={(e: any) => handleMouse(e)}
               onMouseLeave={() => {
                 refData.current.style.display = 'none'
               }}
-              data-info="<div>Tendido 3B</div><div>Fila:Barrera</div><div>Asiento:1</div><div>Precio:S/300.00</div>"
+              data-info={`<div class="flex flex-col items-center">
+          <span class=" text-gray-400 text-lg uppercase">Fila</span>
+          <span class="font-bold text-lg">Barrera</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class=" text-gray-400 text-lg uppercase">Asiento</span>
+          <span class="font-bold text-lg">1</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class=" text-gray-400 text-lg uppercase">Precio</span>
+          <span class="font-bold text-lg">S/300.00</span>
+        </div>
+        <div class="md:col-span-3 flex justify-center">
+          <span class="text-center text-gray-400 text-lg uppercase">
+            Tendido 3B
+          </span>
+        </div>`}
             />
             <circle
               className="t-cls-5"

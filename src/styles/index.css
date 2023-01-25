@@ -332,8 +332,10 @@ body {
 }
 
 .t-cls-5 {
-  fill: rgb(160, 46, 43);
+  fill: white;
   cursor: pointer;
+  stroke: #000000;
+  stroke-width: 2px;
 }
 #info-box {
   display: none;
@@ -341,8 +343,8 @@ body {
   top: 0px;
   z-index: 1;
   background-color: #ffffff;
-  border: 2px solid #bf0a30;
-  border-radius: 5px;
-  padding: 5px;
-  font-family: arial;
+  -webkit-box-shadow: 1px -1px 16px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px -1px 16px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px -1px 16px -4px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s;
 }
