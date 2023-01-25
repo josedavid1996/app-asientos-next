@@ -4,7 +4,7 @@ import {
   TransformComponent,
   ReactZoomPanPinchRef
 } from 'react-zoom-pan-pinch'
-import LayoutSvg from '../components/layout/Navbar/LayoutSvg'
+import LayoutSvg from '../components/layout/LayoutSvg'
 import CardMap from '../components/shared/CardMap'
 
 function App() {
@@ -40,9 +40,7 @@ function App() {
   }
 
   return (
-    <div
-      className={`flex justify-center w-full items-center min-h-screen relative overflow-hidden`}
-    >
+    <div className="flex justify-center w-full items-center min-h-screen relative overflow-hidden">
       <div
         id="info-box"
         className="grid-cols-1 md:grid-cols-3 px-3 py-2 w-[200px] md:w-[300px]"
