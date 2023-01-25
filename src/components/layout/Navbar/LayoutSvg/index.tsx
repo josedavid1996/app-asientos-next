@@ -1,4 +1,10 @@
-import React, { MouseEvent, SyntheticEvent, useEffect } from 'react'
+import React, {
+  MouseEvent,
+  MouseEventHandler,
+  SVGProps,
+  SyntheticEvent,
+  useEffect
+} from 'react'
 
 const LayoutSvg = ({
   sizeShadow,
@@ -32,11 +38,13 @@ const LayoutSvg = ({
     }
   }, [sizeShadow >= 2])
 
-  const handleMouse = (e: any) => {
+  const handleMouse = (
+    e: MouseEvent<SVGCircleElement, globalThis.MouseEvent>
+  ) => {
     refData.current.style.display = 'grid'
     refData.current.style.top = `${e.pageY}px`
     refData.current.style.left = `${e.pageX}px`
-    refData.current.innerHTML = e.target.dataset.info
+    refData.current.innerHTML = (e.target as SVGCircleElement).dataset.info
   }
 
   return (
@@ -795,11 +803,18 @@ const LayoutSvg = ({
               cy="1886.65"
               r="17.58"
               id="T3B-B-1"
-              onClick={(e: any) => {
-                e.target.classList.toggle('fill-[#C70039]')
-                // console.log(e.target.classList!)
+              onClick={(
+                e: MouseEvent<SVGCircleElement, globalThis.MouseEvent>
+              ) => {
+                const { target } = e
+                if (target)
+                  (target as SVGCircleElement).classList.toggle(
+                    'fill-[#C70039]'
+                  )
               }}
-              onMouseEnter={(e: any) => handleMouse(e)}
+              onMouseEnter={(
+                e: MouseEvent<SVGCircleElement, globalThis.MouseEvent>
+              ) => handleMouse(e)}
               onMouseLeave={() => {
                 refData.current.style.display = 'none'
               }}
