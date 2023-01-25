@@ -13,8 +13,8 @@ const CardMap = ({ sizeShadow = 0, translateXShawdow = 0 }: Props) => {
         <div
           className="absolute bg-[#0000005e] "
           style={{
-            width: `calc(100% - ${(sizeShadow - 1) * 20}px)`,
-            height: `calc(100% - ${(sizeShadow - 1) * 20}px)`,
+            width: `calc(100% - ${(sizeShadow - 1) * 15}px)`,
+            height: `calc(100% - ${(sizeShadow - 1) * 15}px)`,
             transform: `translateX(${translateXShawdow / 10}px)`,
             transition: 'all .5s'
           }}

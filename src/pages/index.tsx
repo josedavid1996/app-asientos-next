@@ -73,7 +73,7 @@ function App() {
           initialPositionX={0}
           initialPositionY={0}
           ref={refZoom}
-          maxScale={4}
+          maxScale={6}
           onPanning={(refZoom) => {
             translateX(refZoom)
           }}
@@ -81,7 +81,14 @@ function App() {
             setSizeShadow(Math.round(refZoom.state.scale))
           }}
         >
-          {({ zoomIn, zoomOut, resetTransform, setTransform, ...rest }) => {
+          {({
+            zoomIn,
+            zoomOut,
+            resetTransform,
+            setTransform,
+            zoomToElement,
+            ...rest
+          }) => {
             return (
               <>
                 <CardMap
@@ -154,7 +161,12 @@ function App() {
                 </div>
                 <TransformComponent>
                   <div className="w-full h-full">
-                    <LayoutSvg sizeShadow={sizeShadow} refData={refData} />
+                    <LayoutSvg
+                      sizeShadow={sizeShadow}
+                      refData={refData}
+                      setTransform={setTransform}
+                      setSizeShadow={setSizeShadow}
+                    />
                   </div>
                 </TransformComponent>
               </>
