@@ -94,7 +94,7 @@ function App() {
                   translateXShawdow={translateXShawdow}
                 />
 
-                <div className="tools absolute top-2 right-3 hidden sm:flex flex-col z-20">
+                <div className="tools absolute top-2 right-3  flex-col z-20">
                   <button
                     className="w-[32px] h-[32px] rounded-[3px] shadow-[0_1px_4px_rgba(152,4,19,0.5)] border border-[#ccc] flex justify-center items-center cursor-pointer bg-white"
                     onClick={() => {
