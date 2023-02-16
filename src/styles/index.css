@@ -348,3 +348,78 @@ body {
   box-shadow: 1px -1px 16px -4px rgba(0, 0, 0, 0.75);
   transition: all 0.5s;
 }
+.new-cls-1,
+.new-cls-2 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-3 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-4,
+.new-cls-5 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-6,
+.new-cls-7 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-8,
+.new-cls-9 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-10,
+.new-cls-11 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-12,
+.new-cls-13 {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.new-cls-14 {
+  fill: #f7f7f7;
+  stroke: #232020;
+  stroke-miterlimit: 10;
+}
+
+.new-cls-2,
+.new-cls-11,
+.new-cls-13,
+.new-cls-9,
+.new-cls-5,
+.new-cls-7 {
+  font-family: MyriadPro-Regular, 'Myriad Pro';
+  font-size: 90px;
+  cursor: pointer;
+}
+
+/* #Fila_1-2 path {
+  fill: #980413;
+} */

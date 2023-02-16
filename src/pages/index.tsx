@@ -43,7 +43,7 @@ function App() {
     <div className="flex justify-center w-full items-center min-h-screen relative overflow-hidden">
       <div
         id="info-box"
-        className="grid-cols-1 md:grid-cols-3 px-3 py-2 w-[200px] md:w-[300px]"
+        className="grid-cols-1 md:grid-cols-3 px-3 py-2 "
         ref={refData}
       >
         {/* <div className="flex flex-col items-center">
