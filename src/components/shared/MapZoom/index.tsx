@@ -4,8 +4,9 @@ import {
   TransformComponent,
   ReactZoomPanPinchRef
 } from 'react-zoom-pan-pinch'
-import LayoutSvg from './LayoutSvg'
+
 import CardMap from './CardMap'
+import LayoutSvg from './LayoutSvg'
 
 const MapZoom = () => {
   const refZoom = useRef<ReactZoomPanPinchRef | null>(null)
@@ -14,7 +15,6 @@ const MapZoom = () => {
 
   // estado para controlar el tamaño del fondo negro de la imagen pequeña del mapa
   const [sizeShadow, setSizeShadow] = useState(1)
-  console.log(sizeShadow)
   // estado para controlar el zoom
 
   const [translateXShawdow, setTranslateXShawdow] = useState(0)
@@ -66,7 +66,7 @@ const MapZoom = () => {
         </div> */}
         </div>
 
-        <div className="w-[80%] h-[80%] bg-white ">
+        <div className="w-full h-full bg-white ">
           <TransformWrapper
             initialScale={1}
             initialPositionX={0}
@@ -159,7 +159,7 @@ const MapZoom = () => {
                     </button>
                   </div>
                   <TransformComponent>
-                    <div className="w-full h-full">
+                    <div className="w-full h-full flex justify-center items-center">
                       <LayoutSvg
                         sizeShadow={sizeShadow}
                         refData={refData}
