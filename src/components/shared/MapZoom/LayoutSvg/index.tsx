@@ -119,7 +119,7 @@ const LayoutSvg = ({
            </div>
            <div class="flex flex-col items-center">
              <span class=" text-gray-400 text-lg uppercase">Precio</span>
-             <span class="font-bold text-lg">S/300.00</span>
+             <span class="font-bold text-lg">S/${isPrecio}</span>
            </div>
            <div class="md:col-span-3 flex justify-center">
              <span class="text-center text-gray-400 text-lg uppercase">

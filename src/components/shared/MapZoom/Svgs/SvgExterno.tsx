@@ -7,6 +7,13 @@ const SvgExterno = ({ sizeShadow }: { sizeShadow: number }) => {
         className={`${sizeShadow < 2 ? 'block' : 'hidden'} w-full h-full`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 5000 5000"
+        onClick={(e) => {
+          const clase = (e.target as SVGPathElement).classList[0]
+
+          if (clase === 'cls-11') {
+            console.log(e)
+          }
+        }}
       >
         <defs></defs>
         <g id="Tendido_1" data-name="Tendido 1">
