@@ -7,7 +7,7 @@ interface Props {
 
 const CardMap = ({ sizeShadow = 0, translateXShawdow = 0 }: Props) => {
   return (
-    <div className="hidden md:flex w-[130px] h-[80px] absolute z-20 right-15 top-2 shadow-[0_1px_4px_rgba(152,4,19,0.5)]  justify-center items-center  bg-white">
+    <div className="hidden sm:flex w-[130px] h-[80px] absolute z-20 right-15 top-2 shadow-[0_1px_4px_rgba(152,4,19,0.5)]  justify-center items-center  bg-white">
       <div className="w-full h-full relative flex justify-center items-center overflow-hidden">
         <img src="/coliseo.svg" className="h-full" />
         <div
