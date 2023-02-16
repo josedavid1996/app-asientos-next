@@ -2,12 +2,17 @@ import React, { MutableRefObject } from 'react'
 
 interface Props {
   tendidoDosBajo: MutableRefObject<SVGGElement | null>
+  sizeShadow: number
 }
 
-const SvgInterno = ({ tendidoDosBajo }: Props) => {
+const SvgInterno = ({ tendidoDosBajo, sizeShadow }: Props) => {
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 5000">
+      <svg
+        className={`${sizeShadow >= 2 ? 'block' : 'hidden'} w-full h-full`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 5000 5000"
+      >
         <defs></defs>
         <g id="Tendido_1" data-name="Tendido 1">
           <path

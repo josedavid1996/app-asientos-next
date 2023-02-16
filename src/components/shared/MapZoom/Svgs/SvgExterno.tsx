@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SvgExterno = () => {
+const SvgExterno = ({ sizeShadow }: { sizeShadow: number }) => {
   return (
     <>
       <svg
-        className="w-full h-full"
+        className={`${sizeShadow < 2 ? 'block' : 'hidden'} w-full h-full`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 5000 5000"
       >
