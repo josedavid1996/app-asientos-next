@@ -1,7 +1,7 @@
-import React, { SVGProps } from 'react'
+import React, { MutableRefObject } from 'react'
 
 interface Props {
-  tendidoDosBajo: any
+  tendidoDosBajo: MutableRefObject<SVGGElement | null>
 }
 
 const SvgInterno = ({ tendidoDosBajo }: Props) => {

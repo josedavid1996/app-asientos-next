@@ -41,7 +41,7 @@ const MapZoom = () => {
 
   return (
     <>
-      <div className="flex justify-center w-full h-full items-center  relative overflow-hidden">
+      <div className="flex justify-center w-full h-full items-center   overflow-hidden">
         <div
           id="info-box"
           className="grid-cols-1 md:grid-cols-3 px-3 py-2 "
@@ -66,7 +66,7 @@ const MapZoom = () => {
         </div> */}
         </div>
 
-        <div className="w-full h-full bg-white ">
+        <div className="w-full h-full bg-white relative">
           <TransformWrapper
             initialScale={1}
             initialPositionX={0}
